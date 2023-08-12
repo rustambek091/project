@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, ListView
 
+from pages.models import Blog
+
 # Create your views here.
 
 
@@ -10,7 +12,8 @@ class Home(TemplateView):
 class About(TemplateView):
     template_name = 'about.html'
 
-class Blog(TemplateView):
+class Blogs(ListView):
+    model = Blog
     template_name = 'blog.html'    
 
 class Client(TemplateView):
