@@ -67,20 +67,23 @@
         <div class="container">
             <h1 class="what_text">Our Work Portfolio</h1>
         </div>
+        {% for x in object_list %}
         <div class="container-fluid">
             <div class="images_section">
                 <div class="row">
                     <div class="col-sm-4 padding_0">
                         <div class="container_1">
-                            <img src="/static/images/img-14.png" alt="Avatar" class="image" style="width:100%">
+                            <img src="{{x.img.url}}" alt="Avatar" class="image" style="width:100%">
                             <div class="middle">
                               <div class="text"><img src="/static/images/search-icon.png"></div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+      
         <div class="portfolio_section_2 layout_padding">
             <div class="container">
                 <h1 class="best_taital">We Are Providing
@@ -90,6 +93,7 @@
             </div>
         </div>
     </div>
+    
     <!-- portfolio section end -->
     <!-- footer section start -->
     <div class="footer_section layout_padding">
