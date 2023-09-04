@@ -7,6 +7,6 @@ urlpatterns = [
     path('blog/', Blogs.as_view(), name='blog'),
     path('client/', Client.as_view(), name='client'),
     path('contact/', Contact.as_view(), name='contact'),
-    path('services/', Services.as_view(), name='services'),
-    path('register/', Register.as_view(), name='register'),
+    path('services/', Services, name='services'),
+    path('services/<int:pk>/', Services, name='services_detail'),
     ]

@@ -13,4 +13,4 @@ def register(request):
             return redirect('home')  # O'zgartirishingiz kerak bo'lgan boshqa sahifa nomi
     else:
         form = UserCreationForm()
-    return render(request, 'registration/register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})

@@ -67,22 +67,23 @@
         <div class="container">
             <h1 class="what_text">Our Work Portfolio</h1>
         </div>
-        {% for x in object_list %}
         <div class="container-fluid">
-            <div class="images_section">
-                <div class="row">
-                    <div class="col-sm-4 padding_0">
-                        <div class="container_1">
-                            <img src="{{x.img.url}}" alt="Avatar" class="image" style="width:100%">
-                            <div class="middle">
-                              <div class="text"><img src="/static/images/search-icon.png"></div>
+          <div class="images_section">
+            <div class="row">
+                    {% for x in servis %}
+                      <div class="col-sm-4 padding_0">
+                          <div class="container_1">
+                              <img src="{{x.img.url }}" alt="Avatar" class="image" style="width:100%">
+                              <div class="middle">
+                                <div class="text"><img src="/static/images/search-icon.png"></div>
+                              </div>
                             </div>
-                            {% endfor %}
+                          </div>
+                    {% endfor %}
                         </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </div>
+    </div>
       
         <div class="portfolio_section_2 layout_padding">
             <div class="container">

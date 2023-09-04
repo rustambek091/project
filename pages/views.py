@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView, ListView
+from django.views.generic import TemplateView, CreateView, ListView, DetailView
 
-from pages.models import Blog
+from .models import * 
 
 # Create your views here.
 
@@ -23,5 +23,14 @@ class Client(TemplateView):
 class Contact(TemplateView):
     template_name = 'contact.html'
 
-class Services(TemplateView):
-    template_name = 'services.html'
+def Services(request):
+    servis = Service.objects.all()
+    context = {
+        'servis':servis
+    }
+    return render(request,'services.html', context)
+
+class Service_Detail(DetailView):
+    model = Service
+    template_name = "detail_servise.html"
+    
